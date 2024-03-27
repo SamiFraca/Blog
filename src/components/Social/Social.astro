@@ -1,0 +1,7 @@
+---
+import type { SocialProps } from "./Social";
+
+const { platform, username }: SocialProps = Astro.props as SocialProps;
+---
+
+<a href={`https://www.${platform}.com/${username}`}>{platform}</a>
