@@ -1,0 +1,22 @@
+---
+import Navigation from "@components/Navigation.astro";
+import Footer from "@components/Footer.astro";
+const { title } = Astro.props;
+export interface Props {
+    title: String;
+}
+import "../styles/global.css";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+  </head>
+  <body class="mx-auto max-w-2xl bg-[--bg] px-5 py-12 text-[--text]">
+    <Navigation />
+    <slot></slot>
+    <Footer />
+  </body>
+</html>

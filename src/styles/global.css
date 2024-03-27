@@ -1,0 +1,14 @@
+
+:root {
+  --text: #222;
+  --title: #222;
+  --bg: #fff;
+  --primary-color: #79c2d0;
+}
+
+html.dark {
+  --text: #fff;
+  --title: #fff;
+  --bg: #282c35;
+  --primary-color: #bbe4e9;
+}
