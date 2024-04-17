@@ -4,4 +4,29 @@ import type { SocialProps } from "./Social";
 const { platform, username }: SocialProps = Astro.props as SocialProps;
 ---
 
-<a href={`https://www.${platform}.com/${username}`}>{platform}</a>
+<a href={`https://www.${platform}.com/${username}`}
+  ><img
+    class="w-fit shrink-0 icon"
+    src={`/icons8-${platform}-light.svg`}
+    alt=`${platform}`
+  /></a
+>
+
+<script>
+  const themeToggle = document.getElementById("themeToggle");
+  const HTMLDocument = document.documentElement;
+  const icons = document.querySelectorAll(".icon");
+
+  const toggleIcon = () => {
+    icons.forEach((e) => {
+      const img = e as HTMLImageElement; 
+      if (HTMLDocument.classList.contains('dark')) {
+        img.src = img.src.replace("dark", "light");
+      } else {
+        img.src = img.src.replace("light", "dark");
+      }
+    });
+  };
+
+  themeToggle?.addEventListener("click", toggleIcon);
+</script>
