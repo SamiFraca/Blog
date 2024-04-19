@@ -46,6 +46,7 @@
 
 
   const handleToggleClick = () => {
+    const element = document.documentElement;
 
     element.classList.toggle("dark");
     const isDark = localStorage.getItem("theme") === "dark";
