@@ -1,0 +1,32 @@
+---
+title: "My First Blog Post"
+pubDate: "2024-03-27"
+description: "Introduction to my blog"
+---
+
+import BlogLayout from "@layouts/BlogLayout.astro";
+
+<BlogLayout title={frontmatter.title} pubDate={frontmatter.pubDate}>
+  <p>
+    Welcome to my new blog! As a fervent enthusiast of technology, I'm thrilled
+    to embark on this journey of sharing my thoughts with the world.
+  </p>
+  <p>
+    My blog is more than just a platform—it's a space dedicated to the
+    exploration and dissemination of knowledge, thoughts, and ideas. With a
+    passion for innovation and a curiosity that knows no bounds, I aim to foster
+    a community where like-minded individuals can come together to engage in
+    meaningful discussions and broaden their horizons.
+  </p>
+  <p>
+    From the latest advancements in artificial intelligence to the intricacies
+    of frontend technology, no topic is off-limits here. Whether you're a
+    seasoned expert or a curious novice, there's something for everyone to
+    discover and explore.
+  </p>
+  <p>
+    So, join me on this exciting adventure as we delve into the fascinating
+    world of technology and beyond. Together, let's ignite our curiosity, spark
+    insightful conversations, and inspire each other to reach new heights!
+  </p>
+</BlogLayout>
