@@ -4,6 +4,7 @@
   --title: #222;
   --bg: #fff;
   --primary-color: #79c2d0;
+  --date-color: #323232;
 }
 
 html.dark {
@@ -11,4 +12,38 @@ html.dark {
   --title: #fff;
   --bg: #282c35;
   --primary-color: #bbe4e9;
+  --date-color: #E5E7EB;
 }
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('/fonts/Figtree-VariableFont_wght.ttf') format('woff');
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Red Hat Text';
+  src: url('/fonts/RedHatText-VariableFont_wght.ttf') format('woff');
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+.title{
+  font-family: 'Figtree', sans-serif;
+}
+.text{
+  font-family: 'Red Hat Text', sans-serif;
+}
+
+.markdown{
+  margin-top: 20px;
+  line-height: 28px;
+  font-weight: 300;
+}
+.markdown p {
+  margin-top:20px;
+}
+
+
