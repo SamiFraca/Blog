@@ -8,7 +8,7 @@ const Post = ({ title, pubDate, description }: PostProps) => {
     <>
       <h2 className="text-4xl font-bold text-post-title pb-4 title" >{title}</h2>
       <p className="italic text-gray-200 text-[--date-color] text">{pubDate}</p>
-      <p className="text">{description}</p>
+      <p className="markdown text">{description}</p>
     </>
   );
 };
