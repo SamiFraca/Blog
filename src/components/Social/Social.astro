@@ -4,7 +4,7 @@ import type { SocialProps } from "./Social";
 const { platform, username }: SocialProps = Astro.props as SocialProps;
 ---
 
-<a href={`https://www.${platform}.com/${username}`}></a>
+<a href={`https://www.${platform}.com/${username}`}>
 {
   (
     <>
@@ -16,7 +16,7 @@ const { platform, username }: SocialProps = Astro.props as SocialProps;
     </>
   )
 }
-
+</a>
 <script>
   const themeToggle = document.getElementById("themeToggle");
   const icons = document.querySelectorAll(".icon");
