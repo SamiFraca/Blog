@@ -4,27 +4,47 @@ import MainLayout from "@layouts/MainLayout.astro";
 ---
 
 <MainLayout title="Home Page">
-
+  <main>
+    <h1 class="text-4xl font-bold text-post-title pb-4 title mt-5">
+      Hey there!👋
+    </h1>
+    <div class="markdown">
+      <p>
+        This blog is like my virtual hangout spot where we can chat about
+        everything from the latest gadgets to the apps that make our lives
+        easier. And hey, you don't need to be a tech guru to join in—whether
+        you're a tech whiz or just curious about what's out there, you're
+        totally welcome! 🌟
+      </p>
+      <p class="mt-5">
+        Think of it as a place to chill, share stories, knowledge and maybe even pick up a
+        few tech tricks along the way. Plus, we'll have plenty of fun facts I
+        promise!
+      </p>
+    </div>
+  </main>
 </MainLayout>
 
-
 <script is:inline>
-	const getThemePreference = () => {
-		if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-			return localStorage.getItem('theme');
-		}
-		return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-	};
-	const isDark = getThemePreference() === 'dark';
-	document.documentElement.classList[isDark ? 'add' : 'remove']('dark');
+  const getThemePreference = () => {
+    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+      return localStorage.getItem("theme");
+    }
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+  };
+  const isDark = getThemePreference() === "dark";
+  document.documentElement.classList[isDark ? "add" : "remove"]("dark");
 
-	if (typeof localStorage !== 'undefined') {
-		const observer = new MutationObserver(() => {
-			const isDark = document.documentElement.classList.contains('dark');
-			localStorage.setItem('theme', isDark ? 'dark' : 'light');
-		});
-		observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-	}
+  if (typeof localStorage !== "undefined") {
+    const observer = new MutationObserver(() => {
+      const isDark = document.documentElement.classList.contains("dark");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+  }
 </script>
-
-
