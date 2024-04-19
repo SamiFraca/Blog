@@ -67,21 +67,34 @@
   }
   const handleToggleClick = () => {
     const element = document.documentElement;
-
-    element.classList.toggle("dark");
     const isDark = localStorage.getItem("theme") === "dark";
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-    ball.classList.toggle("inactive");
+    element.classList.toggle("dark");
+
+    if (isDark) {
+      ball.style.transition = "transform 0.2s ease-out";
+      ball.style.transform = "translateX(calc(-64px - -24px))";
+      setTimeout(() => {
+        ball.classList.add("inactive");
+        ball.style.transform = "";
+        ball.style.transition="";
+
+      }, 500);
+    } else {
+      ball.style.transition = "transform 0.2s ease-out";
+      ball.style.transform = "translateX(calc(64px - 24px))";
+      setTimeout(() => {
+        ball.classList.remove("inactive");
+        ball.style.transform = "";
+        ball.style.transition="";
+
+      }, 500);
+    }
+
+    localStorage.setItem("theme", isDark ? "light" : "dark");
   };
   document
     .getElementById("themeToggle")
     .addEventListener("click", handleToggleClick);
-
-  setTimeout(function () {
-    if (theme === "light") {
-      ball.classList.add("inactive");
-    }
-  }, 0);
 </script>
 
 <style>
@@ -115,12 +128,10 @@
     opacity: 0.5;
   }
 
-  #themeToggleBall {
-    transition: transform 0.3s ease;
-  }
+
 
   .inactive {
-    transform: translateX(calc(-64px - -24px));
+    left: 0 !important;
   }
 
   .dark .sun,
