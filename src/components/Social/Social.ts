@@ -1,4 +1,4 @@
-export type SocialProps = {
+export  type SocialProps = {
     platform: String,
-    username: Number
+    username: String
   };

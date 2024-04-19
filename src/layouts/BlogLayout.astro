@@ -1,0 +1,26 @@
+---
+import MainLayout from "@layouts/MainLayout.astro";
+const { title,pubDate } = Astro.props;
+
+export interface Props {
+  title: String;
+  pubDate: String;
+}
+---
+
+<MainLayout title="Blog">
+  <main>
+    <article>
+      <h1 class="text-4xl font-bold text-post-title mb-4 mt-5 title">
+        {title}
+      </h1>
+
+      <p class="italic text-gray-200 text-[--date-color] text"
+        >{pubDate}
+      </p>
+      <div class="markdown text">
+        <slot></slot>
+      </div>
+    </article>
+  </main>
+</MainLayout>

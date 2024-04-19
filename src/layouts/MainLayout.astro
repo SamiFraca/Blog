@@ -2,7 +2,7 @@
 import Navigation from "@components/Navigation.astro";
 const { title } = Astro.props;
 export interface Props {
-    title: String;
+  title: String;
 }
 import "../styles/global.css";
 ---
@@ -12,9 +12,24 @@ import "../styles/global.css";
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{title}</title>
+    <link
+      rel="preload"
+      href="/fonts/Figtree-VariableFont_wght.ttf"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/RedHatText-VariableFont_wght.ttf"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="preload" href="/myself.webp" as="image" />
   </head>
   <body class="mx-auto max-w-2xl bg-[--bg] px-5 py-12 text-[--text]">
     <Navigation />
-    <slot></slot>
+    <slot />
   </body>
 </html>

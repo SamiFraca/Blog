@@ -4,7 +4,9 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
-      color: {},
+      colors: {
+        'post-title': "#79c2d0",
+      },
     },
   },
   plugins: [],
