@@ -37,7 +37,7 @@ const Posts: React.FC = () => {
   return (
     <ul>
       {posts.map(({ frontmatter, filename }) => (
-        <li className="mt-5">
+        <li className="mt-5 hover:scale-[1.005] scale-100 active:scale-100" style={{ transition: "all .15s ease-in-out" }}>
           <a href={`/posts/${filename.replace(".mdx", "")}`}>
             <Post {...frontmatter} />
           </a>
