@@ -76,6 +76,12 @@
   document
     .getElementById("themeToggle")
     .addEventListener("click", handleToggleClick);
+
+  setTimeout(function () {
+    if (theme === "light") {
+      ball.classList.add("inactive");
+    }
+  }, 0);
 </script>
 
 <style>
@@ -116,7 +122,6 @@
   .inactive {
     transform: translateX(calc(-64px - -24px));
   }
-
 
   .dark .sun,
   .dark .moon {
