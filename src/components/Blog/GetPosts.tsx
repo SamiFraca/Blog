@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useMemo } from "react";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -28,11 +28,12 @@ const getPosts = (): GetPostsPost[] => {
       filename: file,
       frontmatter: data as GetPostsFrontmatter,
     };
-  });
+  }); 
 };
 
 const Posts: React.FC = () => {
-  const posts = getPosts();
+  const posts = useMemo(getPosts, []);
+
 
   return (
     <ul>

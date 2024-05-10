@@ -17,19 +17,21 @@ html.dark {
 
 @font-face {
   font-family: 'Figtree';
-  src: url('/fonts/Figtree-VariableFont_wght.ttf') format('woff');
+  src: url('/fonts/Figtree-VariableFont_wght.woff2') format('woff');
   font-weight: 400 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Red Hat Text';
-  src: url('/fonts/RedHatText-VariableFont_wght.ttf') format('woff');
+  src: url('/fonts/RedHatText-VariableFont_wght.woff2') format('woff');
   font-weight: 300 700;
   font-style: normal;
   font-display: swap;
 }
-
+html{
+  font-family: 'Figtree','Red Hat Text',sans-serif;
+}
 .title{
   font-family: 'Figtree', sans-serif;
 }
