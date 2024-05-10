@@ -32,11 +32,14 @@ html.dark {
 html{
   font-family: 'Figtree','Red Hat Text',sans-serif;
 }
-.title{
-  font-family: 'Figtree', sans-serif;
-}
 .text{
   font-family: 'Red Hat Text', sans-serif;
+}
+.link {
+  @apply text-blue-400 hover:text-blue-500 transition-all;
+}
+.secondary-title{
+  @apply text-3xl font-bold;
 }
 
 .markdown{
