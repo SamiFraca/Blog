@@ -27,7 +27,7 @@ html.dark {
   src: url('/fonts/RedHatText-VariableFont_wght.woff2') format('woff');
   font-weight: 300 700;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 html{
   font-family: 'Figtree','Red Hat Text',sans-serif;
